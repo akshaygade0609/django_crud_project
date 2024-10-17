@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'books',  # My app
 ]
 
+LOGIN_URL = '/login/'  # Redirect to login if not authenticated
+LOGIN_REDIRECT_URL = '/'  # Where to redirect after login
+LOGOUT_REDIRECT_URL = 'login_page'  # Where to go after logout
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -80,7 +83,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',  # Database engine for MySQL
         'NAME': 'django_crud_db',              # The name of the database you created
         'USER': 'root',                        # MySQL username
-        'PASSWORD': 'Patil@123',           # MySQL password (use the root password or any other user you've set up)
+        'PASSWORD': 'Patil@123',               # MySQL password 
         'HOST': 'localhost',                   # Or the IP of your MySQL server
         'PORT': '3306',                        # Default MySQL port
     }
